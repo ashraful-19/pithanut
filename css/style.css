@@ -8,9 +8,16 @@
 .ff-secondary {
     font-family: 'Pacifico', cursive;
 }
-
+p{
+    font-family: SolaimanLipi;
+}
 .fw-medium {
     font-weight: 600 !important;
+}
+.centered-div { 
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .fw-semi-bold {
@@ -384,7 +391,7 @@
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
-    background: var(--primary) !important;
+    background: #460a0a!important;
     border-color: var(--primary) !important;
 }
 
