@@ -217,12 +217,16 @@ p{
 
 /*** Service ***/
 .service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+border-radius: 10px!important;
+    box-shadow: 0   0 45px rgba(112, 112, 112, 0.05);
     transition: .5s;
+    border: 1px solid rgb(236, 236, 236);
+    text-align: center;
+    margin-top: 20px;
 }
 
 .service-item:hover {
-    background: var(--primary);
+    background: rgb(88, 0, 0);
 }
 
 .service-item * {
@@ -244,12 +248,13 @@ p{
 .video {
     position: relative;
     height: 100%;
-    min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../img/video.jpeg);
+    min-height: 350px;
+    background: linear-gradient(rgba(40, 51, 78, 0.1), rgb(13 18 28 / 95%)), url(../img/video.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    border-radius: 15px;
    
 }
 
@@ -279,7 +284,7 @@ p{
     display: block;
     width: 100px;
     height: 100px;
-    background: var(--primary);
+    background: #832c12;
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
 }
@@ -294,7 +299,7 @@ p{
     display: block;
     width: 100px;
     height: 100px;
-    background: var(--primary);
+    background: #832c12;
     border-radius: 50%;
     transition: all 200ms;
 }
@@ -313,7 +318,7 @@ p{
     z-index: 3;
     width: 0;
     height: 0;
-    border-left: 32px solid var(--dark);
+    border-left: 32px solid #ffffff;
     border-top: 22px solid transparent;
     border-bottom: 22px solid transparent;
 }
@@ -359,12 +364,22 @@ p{
     opacity: 1;
 }
 
+.order-details{
+    font-family:hind siliguri,SolaimanLipi!important; 
+    text-align: center;
+    margin: 20px; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
 
+}
 /*** Team ***/
 .team-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    border-radius: 10px!important;
     height: calc(100% - 38px);
     transition: .5s;
+    padding-bottom: 10px;
 }
 
 .team-item img {
