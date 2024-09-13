@@ -1,237 +1,679 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-<title>MithaNut</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
 
-    <!-- Favicon -->
-    <link href="img/favicon.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  
+<style>
+        *,html {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black!important;
+        }
+        a, a:hover, a:active, a:link, a:visited {
+  text-decoration: none !important;
+  color: black;
+ }
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+        .con {
+            position: relative;
+            height: auto;
+            border: none;
+            margin-top: 0; /* Initialize margin-top */
+        }
+        
+.options {
+    position: fixed;
+    bottom: 85px;
+    right: 30px;
+    margin-left: 20px;
+    font-size: 1em;
+    flex: 1 1 calc(20% - 10px);
+    min-width: 150px;
+    box-sizing: border-box;
+    max-width: 350px;
+    min-width: 250px;
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar & Hero Starts -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                <a href="/" class="navbar-brand p-0">
-                    <img src="img/logo.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="https://forms.gle/TiKvX2Zk5Nd48iyz6" class="btn btn-danger py-2 px-4" style="background-color: rgb(190, 16, 16);">Order Now</a>
-                </div>
-            </nav>
-
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container text-center my-5 pt-5 pb-4">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-
-        <!-- Contact Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
-                    <h1 class="mb-5">Contact For Any Query</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Phone</h5>
-                                <p><i class="fa fa-phone text-primary me-2"></i>+8801618150096</p>
-                        
-                        <p><i class="fa fa-phone text-primary me-2"></i>+8801618150097</p>
-                        
-                            </div>
-                            <div class="col-md-6">
-                                <h5 class="section-title ff-secondary fw-normal text-start text-primary">Email</h5>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>mithanut100@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 wow fadeIn" data-wow-delay="0.1s">
-                        <iframe class="position-relative rounded w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.8166219097056!2d90.3500417857635!3d23.82511906423277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c119a76091b5%3A0x40b856966f7ed83d!2sEastern%20Housing%20Pallabi!5e0!3m2!1sen!2sbd!4v1706917420673!5m2!1sen!2sbd"
-                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-
-   <!-- Footer Start -->
-   <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Reservation</a>
-                <a class="btn btn-link" href="">Privacy Policy</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>House 17, Road 5,Pallabi,Mirpur</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+8801618150096</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+8801618150097</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>mithanut100@gmail.com</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" href="#">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                      
-                      <a class="btn btn-outline-light btn-social" href="#">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                      
-                      <a class="btn btn-outline-light btn-social" href="#">
-                        <i class="fab fa-youtube"></i>
-                      </a>
-                      
-                      <a class="btn btn-outline-light btn-social" href="#">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                      
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Delivery Partners</h4>
-                <br>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHeyF9_4PhCRSp28luw9x9B4l4_pe9g7fOpD9DbmUYZ14NYcmbSbqM5EZ9T4w2_v0L-Ac&usqp=CAU" alt="" style="height: 40px;">
-                <img src="img/Redx.jpg" alt="" style="height: 40px;">
-                <img src="https://i0.wp.com/futurestartup.b-cdn.net/wp-content/uploads/2019/10/Delivery-Tiger.jpg" alt="" style="height: 40px;">
-                
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Feedback</h4>
-                <p>Your feedback is valuable to us, we care about our product!</p>
-                <div class="position-relative mx-auto" style="max-width: 400px;">
-                    <a href="https://www.facebook.com/mithanut/reviews">  <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Review Now!</button></a>
-             </div>
-                <br>
-            </div>
-        </div>
-       
-    </div>
-
-    <h2 style="color:rgb(255, 255, 255); margin: 0px auto ; text-align: center;" >Our Payment partners</h2>
-    <div class="" style="margin: 0px auto ;" >
-        <style>
-.center-align{
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 20px;
-gap: 15px;
-flex-wrap: wrap;
 }
 
-        </style>
-        <div class="center-align">
-            <img src="https://www.nrhosting.com/wp-content/uploads/2021/01/bKash-Merchant-Account.png" alt="" style="height: 40px;">
-            <img src="img/nagad.jpg" alt="" style="height: 40px;">
-            <img src="img/upay.jpg" alt="" style="height: 40px;">    
-            <img src="img/rocket.jpg" alt="" style="height: 40px;">             
-            <img src="https://images.prothomalo.com/prothomalo-english%2F2022-06%2Fc79062b7-4487-4762-ad32-a09a445edaa6%2Fcity.jpg?rect=0%2C0%2C900%2C473&w=1200&ar=40%3A21&auto=format%2Ccompress&ogImage=true&mode=crop&overlay=&overlay_position=bottom&overlay_width_pct=1" alt="" style="height: 40px;">             
-            <img src="img/sonali_bank.jpg" alt="" style="height: 40px;">             
-                     
+
+
+        
+select {
+  border: none;
+  outline: none;
+  padding: 6px 6px;
+  margin-bottom: 2px;
+  font-size: 16px;
+  border-radius: 4px;
+width: 100%;
+  font-family: 'Noto Serif Bengali', serif;
+  background-color: rgb(215 232 255 / 49%); 
+  backdrop-filter: blur(3px); 
+  -webkit-backdrop-filter: blur(3px); 
+}
+
+
+ select:focus {
+  border: none;
+  outline: none; 
+}
+/* Remove default styling and add custom styles for option elements */
+option {
+  color: #333333;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+
+}
+
+/* Optional: Custom arrow styling */
+select::after {
+  content: "▼"; /* Unicode for downward arrow */
+  font-size: 16px;
+  color: #333;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+        #player {
+            position: relative;
+        }
+
+        .video-main-box {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            margin: 0 auto;
+            background-color: lightblue; /* For debugging visibility */
+        }
+
+        #video-iframe {
+            height: calc((108vw) * 542 / 1038);
+        }
+
+        #content{
+            font-family: 'Noto Serif Bengali', serif;
+            
+        }
+        #content h4{
+            padding: 5px 10px;
+            color: #df00ad;
+        }
+    
+        
+        #content h5{
+            padding: 0px 10px;
+            color: #3a51ab;
+        }
+    
+.video-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    }
+
+
+.video-card {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    align-items: flex-start;
+    font-family: 'Noto Serif Bengali', serif;
+
+}
+
+.video-card:hover {
+    background-color: #f5f5f5;
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 160px; /* Fixed width */
+    height: 90px;  /* Fixed height for a 16:9 ratio */
+    background-color: #ddd;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0; /* Prevents shrinking on narrow screens */
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire thumbnail without distorting */
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.video-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Noto Serif Bengali', serif;
+    line-height: 1;
+
+}
+
+.video-title {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis */
+    display: -webkit-box; /* Use flexbox for multi-line truncation */
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical; /* Stack lines vertically */
+    line-height: 1.4;
+}
+
+
+.video-meta {
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.video-views, .video-year {
+    color: #888;
+}
+
+.active-video {
+    background-color: #e0e0e0; /* Example style for the active video */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-thumbnail {
+        width: 90px; /* Smaller width */
+        height: 50.625px;
+}
+
+}
+.video-container-lesson {
+    background: rgb(255, 255, 255);
+    padding: 0px;
+    margin: 0px;
+}
+    </style>
+</head>
+<body>
+    <div class="video-main-box" style="z-index: 12;">
+        <div class="video-container-lesson" id="player">
+            <iframe id="video-iframe" width="100%" height="100%" src="" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="container">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">All Right Reserved. 
-                    Developed By <a class="border-bottom" href="https://htmlcodex.com">Md Ashraful Islam</a><br><br>
-                    <a class="border-bottom" href="https://themewagon.com" target="_blank">Mithanut</a>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="footer-menu">
-                        <a href="">Home</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="con">
+
+  
+        <div id="content"></div>
+
+
     </div>
+<div class="options">
+    <div class="select-wrapper">
+        <select id="chapter-select" class="custom-select">
+            <option value="">Select a Chapter</option>
+        </select>
+    
+        <select id="playlist-select" class="custom-select" disabled>
+            <option value="">Select a Teacher/Playlist</option>
+        </select>
+    </div>
+    
 </div>
-<!-- Footer End -->
+<%- include('partials/bottom-nav') %>
+
+<script>
+    const apiKey = 'AIzaSyCoDEQJW6holKerCuynz7KgfuHJEwCieIM'; // Your API key
+
+    const data = [
+        {
+            "Chapter 01": {
+                "Saimon Hossain ।। কি নিদারুন আমার সিক্ষক আমি ধ্ন্য সথিতি। জত কথাই বলি এতা আমার মান্তেইহ হবেহ": {
+                    "videos": ["dQw4w9WgXcQ", "9bZkp7q19f0"], // Updated video IDs
+                    "image": "https://example.com/image33333333331.jpg"
+                },
+                "Ilias Ali": {
+                    "videos": ["3JZ_D3ELwOQ", "tVj0ZTS4WF4"], // Updated video IDs
+                    "image": "https://example.com/image2.jpg"
+                },
+                "Ilias Ali || একটু ত এদিক সেদিক হবেই": {
+                    "videos": ["3JZ_D3ELwOQ", "tVj0ZTS4WF4"], // Updated video IDs
+                    "image": "https://example.com/image2.jpg"
+                }
+            }
+        },
+        {
+            "Chapter 02": {
+                "AbC Hossain": {
+                    "videos": ["dQw4w9WgXcQ", "kJQP7kiw5Fk"], // Updated video IDs
+                    "image": "https://example.com/image3.jpg"
+                },
+                "Lijon Ilias Ali": {
+                    "videos": ["3JZ_D3ELwOQ", "kJQP7kiw5Fk"], // Updated video IDs
+                    "image": "https://example.com/image4.jpg"
+                }
+            }
+        },
+        {
+            "Chapter 03": {
+                "Saimon Hossain": {
+                    "videos": ["dQw4w9WgXcQ", "L_j4Th1hA4Q"], // Updated video IDs
+                    "image": "https://example.com/image5.jpg"
+                },
+                "Ilias Ali": {
+                    "videos": ["3JZ_D3ELwOQ", "t2gAqFxx3-8"], // Updated video IDs
+                    "image": "https://example.com/image6.jpg"
+                }
+            }
+        }
+    ];
+
+    function sanitizeForClassName(text) {
+        return text
+            .replace(/[^a-zA-Z0-9]/g, '-') // Replace non-alphanumeric characters with a hyphen
+            .replace(/-+/g, '-') // Replace multiple hyphens with a single hyphen
+            .replace(/^-+|-+$/g, '') // Remove leading and trailing hyphens
+            .toLowerCase(); // Convert to lowercase
+    }
+
+    function fetchVideoDetails(videoIds) {
+        return Promise.all(videoIds.map(id =>
+            fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=${id}&key=${apiKey}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.items && data.items.length > 0) {
+                        return data.items[0];
+                    } else {
+                        console.warn(`No data found for video ID: ${id}`);
+                        return null;
+                    }
+                })
+        )).then(videos => videos.filter(video => video !== null));
+    }
+
+    function formatDuration(duration) {
+        const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
+        if (match) {
+            const hours = match[1] ? match[1].replace('H', '') : '';
+            const minutes = match[2] ? match[2].replace('M', '') : '';
+            const seconds = match[3] ? match[3].replace('S', '') : '';
+            return `${hours ? hours + ':' : ''}${minutes.padStart(2, '0')}:${seconds.padStart(2, '0')}`;
+        }
+        return '0:00';
+    }
+
+    function formatViews(views) {
+        views = parseInt(views, 10);
+        if (views >= 1000000000) {
+            return `${(views / 1000000000).toFixed(1)}B views`;
+        } else if (views >= 1000000) {
+            return `${(views / 1000000).toFixed(1)}M views`;
+        } else if (views >= 1000) {
+            return `${(views / 1000).toFixed(1)}K views`;
+        } else {
+            return `${views} views`;
+        }
+    }
+
+    function displayContent(data) {
+        const content = document.getElementById('content');
+        content.innerHTML = ''; // Clear existing content
+
+        data.forEach(chapter => {
+            Object.keys(chapter).forEach(chapterName => {
+                const chapterDiv = document.createElement('div');
+                
+                const chapterClass = sanitizeForClassName(chapterName);
+                chapterDiv.className = `chapter ${chapterClass}`;
+                chapterDiv.setAttribute('data-chapter-name', chapterName);
+                
+                const chapterHeader = document.createElement('h4');
+                chapterHeader.textContent = chapterName;
+                chapterDiv.appendChild(chapterHeader);
+
+                Object.keys(chapter[chapterName]).forEach(playlistName => {
+                    const playlist = chapter[chapterName][playlistName];
+                    const playlistDiv = document.createElement('div');
+
+                    const playlistClass = sanitizeForClassName(playlistName);
+                    playlistDiv.className = `playlist ${playlistClass}`;
+                    playlistDiv.setAttribute('data-teacher-name', playlistName);
+
+                    const playlistHeader = document.createElement('h5');
+                    playlistHeader.textContent = playlistName;
+                    playlistDiv.appendChild(playlistHeader);
+
+                    const playlistImage = document.createElement('img');
+                    playlistImage.src = playlist.image;
+                    playlistImage.style.maxWidth = '200px';
+                   
+
+                    const videoList = document.createElement('ul');
+                    videoList.className = 'video-list';
+
+                    fetchVideoDetails(playlist.videos).then(videos => {
+                        videos.forEach(video => {
+                            const listItem = document.createElement('li');
+                            listItem.className = 'video-card'; // Add class for styling
+                            listItem.setAttribute('data-video-id', video.id);
+
+                            const thumbnailDiv = document.createElement('div');
+                            thumbnailDiv.className = 'video-thumbnail';
+                            const thumbnailImg = document.createElement('img');
+                            thumbnailImg.src = video.snippet.thumbnails.default.url; // Get the small-sized thumbnail URL
+                            thumbnailImg.alt = video.snippet.title;
+                            thumbnailDiv.appendChild(thumbnailImg);
+
+                            const durationSpan = document.createElement('span');
+                            durationSpan.className = 'video-duration';
+                            durationSpan.textContent = formatDuration(video.contentDetails.duration); // Format duration
+                            thumbnailDiv.appendChild(durationSpan);
+
+                            const infoDiv = document.createElement('div');
+                            infoDiv.className = 'video-info';
+
+                            const titleH3 = document.createElement('h3');
+                            titleH3.className = 'video-title';
+                            titleH3.textContent = video.snippet.title;
+                            infoDiv.appendChild(titleH3);
+
+                            const metaDiv = document.createElement('div');
+                            metaDiv.className = 'video-meta';
+
+                            const viewsSpan = document.createElement('span');
+                            viewsSpan.className = 'video-views';
+                            viewsSpan.textContent = formatViews(video.statistics.viewCount); // Format views
+                            metaDiv.appendChild(viewsSpan);
+
+                            infoDiv.appendChild(metaDiv);
+
+                            listItem.appendChild(thumbnailDiv);
+                            listItem.appendChild(infoDiv);
+
+                            listItem.onclick = function() {
+                                const videoId = this.getAttribute('data-video-id');
+                                const iframe = document.getElementById('video-iframe');
+                                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&rel=0&enablejsapi=1`;
+                            };
+
+                            videoList.appendChild(listItem);
+                        });
+                    });
+
+                    playlistDiv.appendChild(videoList);
+                    chapterDiv.appendChild(playlistDiv);
+                });
+
+                content.appendChild(chapterDiv);
+            });
+        });
+    }
+
+    displayContent(data);
+</script>
 
 
-   
-    </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
 
-</html>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const chapterSelect = document.getElementById('chapter-select');
+        const playlistSelect = document.getElementById('playlist-select');
+        const content = document.getElementById('content');
+        const iframe = document.getElementById('video-iframe');
+    
+        // Sanitize function to format strings for class names and data attributes
+        function sanitizeForClassName(text) {
+            return text
+                .replace(/[^a-zA-Z0-9]/g, '-') // Replace non-alphanumeric characters with a hyphen
+                .replace(/-+/g, '-') // Replace multiple hyphens with a single hyphen
+                .replace(/^-+|-+$/g, '') // Remove leading and trailing hyphens
+                .toLowerCase(); // Convert to lowercase
+        }
+    
+        // Populate chapter select
+        data.forEach(chapter => {
+            const chapterName = Object.keys(chapter)[0];
+            const option = document.createElement('option');
+            option.value = chapterName;
+            option.textContent = chapterName;
+            chapterSelect.appendChild(option);
+        });
+    
+        // Update playlist select based on chapter selection
+        chapterSelect.addEventListener('change', () => {
+            const selectedChapter = chapterSelect.value;
+            playlistSelect.innerHTML = '<option value="">Select a Teacher/Playlist</option>'; // Clear previous options
+            playlistSelect.disabled = !selectedChapter; // Enable/disable based on chapter selection
+    
+            if (selectedChapter) {
+                const chapterData = data.find(chapter => chapter[selectedChapter]);
+                if (chapterData) {
+                    const playlists = chapterData[selectedChapter];
+                    Object.keys(playlists).forEach(playlistName => {
+                        const option = document.createElement('option');
+                        option.value = playlistName;
+                        option.textContent = playlistName;
+                        playlistSelect.appendChild(option);
+                    });
+    
+                    // Pre-select the teacher/playlist if available in query params
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const teacher = urlParams.get('teacher');
+                    if (teacher && playlists[teacher]) {
+                        playlistSelect.value = teacher;
+                    }
+                } else {
+                    console.warn(`No data found for chapter: ${selectedChapter}`);
+                }
+            }
+            updateURL(); // Update URL when chapter changes
+        });
+    
+        // Update content based on selected options
+        function updateContent() {
+            const selectedChapter = chapterSelect.value;
+            const selectedTeacher = playlistSelect.value;
+    
+            console.log('Selected Chapter:', selectedChapter, 'Selected Teacher:', selectedTeacher);
+    
+            // Hide all chapters
+            content.querySelectorAll('.chapter').forEach(ch => ch.style.display = 'none');
+    
+            // Show the selected chapter
+            if (selectedChapter) {
+                const chapterDiv = content.querySelector(`.chapter[data-chapter-name="${selectedChapter}"]`);
+                if (chapterDiv) {
+                    chapterDiv.style.display = 'block';
+    
+                    // Hide all playlists within the chapter
+                    chapterDiv.querySelectorAll('.playlist').forEach(pl => pl.style.display = 'none');
+    
+                    // Show the selected playlist
+                    if (selectedTeacher) {
+                        const playlistDiv = chapterDiv.querySelector(`.playlist[data-teacher-name="${selectedTeacher}"]`);
+                        if (playlistDiv) {
+                            playlistDiv.style.display = 'block';
+    
+                            // Remove active class from all video list items
+                            playlistDiv.querySelectorAll('.video-list li').forEach(li => li.classList.remove('active-video'));
+    
+                            // Get the first video ID from the playlist
+                            const firstVideo = playlistDiv.querySelector('.video-list li');
+                            if (firstVideo) {
+                                const videoId = firstVideo.getAttribute('data-video-id');
+                                if (videoId) {
+                                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&iv_load_policy=3&modestbranding=0&rel=0&showinfo=0&rel=0&enablejsapi=1`;
+    
+                                    // Add active class to the first video
+                                    firstVideo.classList.add('active-video');
+                                } else {
+                                    console.warn('No video ID found for the selected playlist.');
+                                }
+                            }
+                        }
+                    } else {
+                        // Show all playlists if no specific playlist is selected
+                        chapterDiv.querySelectorAll('.playlist').forEach(pl => pl.style.display = 'block');
+    
+                        // Set the iframe source to the first video of the first visible playlist
+                        const firstVisiblePlaylist = chapterDiv.querySelector('.playlist:not([style*="display: none"])');
+                        if (firstVisiblePlaylist) {
+                            const firstVideo = firstVisiblePlaylist.querySelector('.video-list li');
+                            if (firstVideo) {
+                                const videoId = firstVideo.getAttribute('data-video-id');
+                                if (videoId) {
+                                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&rel=0&enablejsapi=1`;
+    
+                                    // Add active class to the first video
+                                    firstVideo.classList.add('active-video');
+                                } else {
+                                    console.warn('No video ID found for the first visible playlist.');
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            updateURL(); // Update the URL whenever content is updated
+        }
+    
+        // Function to update the URL with selected chapter and teacher
+        function updateURL() {
+            const selectedChapter = chapterSelect.value;
+            const selectedTeacher = playlistSelect.value;
+    
+            // Construct new URL
+            const urlParams = new URLSearchParams(window.location.search);
+            if (selectedChapter) {
+                urlParams.set('chapter', selectedChapter);
+            } else {
+                urlParams.delete('chapter');
+            }
+    
+            if (selectedTeacher) {
+                urlParams.set('teacher', selectedTeacher);
+            } else {
+                urlParams.delete('teacher');
+            }
+    
+            const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+            history.replaceState(null, '', newUrl);
+        }
+    
+        // Add event listeners for chapter and playlist selections
+        chapterSelect.addEventListener('change', updateContent);
+        playlistSelect.addEventListener('change', updateContent);
+    
+        // Add event listener to handle video list item clicks
+        content.addEventListener('click', (event) => {
+            if (event.target.tagName === 'LI' && event.target.parentElement.classList.contains('video-list')) {
+                // Remove active class from all video list items
+                event.target.parentElement.querySelectorAll('li').forEach(li => li.classList.remove('active-video'));
+    
+                // Add active class to the clicked video
+                event.target.classList.add('active-video');
+    
+                // Update iframe source
+                const videoId = event.target.getAttribute('data-video-id');
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0&rel=0&enablejsapi=1`;
+            }
+        });
+    
+        // Pre-select the chapter and playlist if available in query params
+        const urlParams = new URLSearchParams(window.location.search);
+        const chapter = urlParams.get('chapter');
+        const teacher = urlParams.get('teacher');
+        if (chapter) {
+            chapterSelect.value = chapter;
+            chapterSelect.dispatchEvent(new Event('change'));
+        }
+        if (teacher) {
+            playlistSelect.value = teacher;
+            updateContent(); // Ensure content updates based on pre-selected teacher
+        }
+    
+        // Trigger content update on page load if no chapter/teacher is pre-selected
+        if (!chapter || !teacher) {
+            updateContent();
+        }
+    
+        // Ensure iframe src is updated after DOM is fully loaded
+        window.addEventListener('load', () => {
+            updateContent();
+        });
+    });
+    
+    // Function to handle card clicks
+    function handleCardClick(event) {
+        // Find the closest element with the 'video-card' class (clicked element or its parent)
+        const videoCard = event.target.closest('.video-card');
+        
+        if (videoCard) {
+            console.log('Clicked card:', videoCard); // Debug: Show clicked card
+            
+            // Remove 'active-video' class from all video cards
+            document.querySelectorAll('.video-card').forEach(card => {
+                card.classList.remove('active-video');
+            });
+            
+            // Add 'active-video' class to the clicked card
+            videoCard.classList.add('active-video');
+        } else {
+            console.log('Clicked outside video card'); // Debug: Clicked outside
+        }
+    }
+    
+    document.getElementById('content').addEventListener('click', handleCardClick);
+</script>
+<script>
+    const videoIframe = document.querySelector('.video-main-box');
+    const con = document.querySelector('.con');
+
+    function setMarginTop() {
+        // Check if videoIframe and con elements exist
+        if (videoIframe && con) {
+            const videoHeight = videoIframe.offsetHeight;
+            con.style.marginTop = `${videoHeight}px`;
+            console.log('Margin Top set to:', videoHeight);
+        } else {
+            console.log('videoIframe or con not found');
+        }
+    }
+
+    setMarginTop(); // initial setting
+
+    window.addEventListener('resize', setMarginTop);
+</script>
+
