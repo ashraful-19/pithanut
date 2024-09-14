@@ -236,7 +236,132 @@ select::after {
 
 
     </div>
-<div class="options">
+<style>
+    nav.bottom-nav{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: fixed;
+      bottom: 0px;
+      border-top: 1px solid rgb(10, 10, 10 / 20%);
+      border-top-left-radius : 12px;
+    border-top-right-radius : 12px;
+    background-color:rgba(255, 255, 255, 0.8) !important;
+      z-index: 34;
+      backdrop-filter: blur(8px); /* add a blur effect */
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px !important;
+      font-family: 'Roboto', sans-serif;
+
+    
+    }
+    .nav-item{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      padding: 10px 5px 10px 5px;
+      width: 100%;
+      color: white!important;
+    
+    }
+    .nav-Item{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 10px 8px 10px;
+      width: 100%;
+    
+    }
+    .nav-Item i{
+      font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-bottom:5px;
+    }
+    .nav-Item span{
+      font-size: 12px;
+    color: rgb(0, 0, 0);
+    }
+    /* ripple effect */
+    .ripple {
+    background-position: center;
+    transition: background 0.8s;
+    }
+    
+    .ripple:hover{
+    background-color: #e4e4e4;
+    background-image: radial-gradient(circle,transparent 1%,#e4e4e4 1%);
+    background-position: center;
+    outline: none;
+    border-radius: 50px;
+    background-size: 15000%;
+    }
+    
+    .ripple:active{
+    transition: background 0s;
+    background-color: #949494;    
+    background-size: 100%;
+    }
+    
+    
+    
+    
+    @media (min-width: 600px) {
+        nav.bottom-nav {
+        width: 40%!important;
+        margin: 0 auto;
+        position: fixed;
+        bottom: 10px!important;
+        border-radius: 10px;
+        left: 30%;
+        
+      }
+     
+    }
+    
+    
+    @media (min-width: 700px) {
+    nav.bottom-nav {
+        width: 40%!important;
+        margin: 0 auto;
+        position: fixed;
+        bottom: 10px!important;
+        border-radius: 10px;
+        left: 30%;
+        
+      }
+     
+      }
+    
+    </style>
+    
+    <section class="Bottom-Navigatoin">
+      <nav class="bottom-nav">
+           <a class="nav-Item ripple" href="/">
+             <i class="fa-solid fa-house-chimney"></i>
+             <span>Home</span>
+           </a>
+     
+           <a class="nav-Item ripple" href="/hsc/science">
+             <i class="fa-regular fa-heart"></i>
+             <span>Science</span>
+           </a>
+     
+    
+           <a class="nav-Item ripple" href="/hsc/commerce"
+             ><i class="fa-solid fa-list-check"></i></i>
+             <span>Commerce</span>
+           </a>
+     
+           <a class="nav-Item ripple" href="/hsc/arts">
+             <i class="fa-regular fa-user"></i>
+             <span>Arts</span>
+           </a>
+         </nav>
+     </section>
+    
+    
+    <div class="options">
     <div class="select-wrapper">
         <select id="chapter-select" class="custom-select">
             <option value="">Select a Chapter</option>
@@ -253,47 +378,43 @@ select::after {
     const apiKey = 'AIzaSyCoDEQJW6holKerCuynz7KgfuHJEwCieIM'; // Your API key
 
     const data = [
-        {
-            "Chapter 01": {
-                "Saimon Hossain ।। কি নিদারুন আমার সিক্ষক আমি ধ্ন্য সথিতি। জত কথাই বলি এতা আমার মান্তেইহ হবেহ": {
-                    "videos": ["dQw4w9WgXcQ", "9bZkp7q19f0"], // Updated video IDs
-                    "image": "https://example.com/image33333333331.jpg"
-                },
-                "Ilias Ali": {
-                    "videos": ["3JZ_D3ELwOQ", "tVj0ZTS4WF4"], // Updated video IDs
-                    "image": "https://example.com/image2.jpg"
-                },
-                "Ilias Ali || একটু ত এদিক সেদিক হবেই": {
-                    "videos": ["3JZ_D3ELwOQ", "tVj0ZTS4WF4"], // Updated video IDs
-                    "image": "https://example.com/image2.jpg"
-                }
-            }
+    {
+      "Chapter 01 - Introduction to Commerce": {
+        "Arif Chowdhury - A very talented teacher he is": {
+          "videos": ["dQw4w9WgXcQ", "9bZkp7q19f0", "VdQY7Bus3wA", "1fL71Mx3wm0", "e-4OBKmeXtI", "KkcuLqj4LFA", "G5MZrTPslD8", "e_tTY-s_R1Q", "zA2G8_eY9Eo", "uO7txC27nHQ","dQw4w9WgXcQ", "9bZkp7q19f0", "VdQY7Bus3wA", "1fL71Mx3wm0", "e-4OBKmeXtI", "KkcuLqj4LFA", "G5MZrTPslD8", "e_tTY-s_R1Q", "zA2G8_eY9Eo", "uO7txC27nHQ","dQw4w9WgXcQ", "9bZkp7q19f0", "VdQY7Bus3wA", "1fL71Mx3wm0", "e-4OBKmeXtI", "KkcuLqj4LFA", "G5MZrTPslD8", "e_tTY-s_R1Q", "zA2G8_eY9Eo", "uO7txC27nHQ","dQw4w9WgXcQ", "9bZkp7q19f0", "VdQY7Bus3wA", "1fL71Mx3wm0", "e-4OBKmeXtI", "KkcuLqj4LFA", "G5MZrTPslD8", "e_tTY-s_R1Q", "zA2G8_eY9Eo", "uO7txC27nHQ"],
+          "image": "https://example.com/image33333333331.jpg"
         },
-        {
-            "Chapter 02": {
-                "AbC Hossain": {
-                    "videos": ["dQw4w9WgXcQ", "kJQP7kiw5Fk"], // Updated video IDs
-                    "image": "https://example.com/image3.jpg"
-                },
-                "Lijon Ilias Ali": {
-                    "videos": ["3JZ_D3ELwOQ", "kJQP7kiw5Fk"], // Updated video IDs
-                    "image": "https://example.com/image4.jpg"
-                }
-            }
-        },
-        {
-            "Chapter 03": {
-                "Saimon Hossain": {
-                    "videos": ["dQw4w9WgXcQ", "L_j4Th1hA4Q"], // Updated video IDs
-                    "image": "https://example.com/image5.jpg"
-                },
-                "Ilias Ali": {
-                    "videos": ["3JZ_D3ELwOQ", "t2gAqFxx3-8"], // Updated video IDs
-                    "image": "https://example.com/image6.jpg"
-                }
-            }
+        "Rita Ahmed - Experienced in business management": {
+          "videos": ["dQw4w9WgXcQ", "9bZkp7q19f0", "VdQY7Bus3wA", "1fL71Mx3wm0", "e-4OBKmeXtI", "KkcuLqj4LFA", "G5MZrTPslD8", "e_tTY-s_R1Q", "zA2G8_eY9Eo", "uO7txC27nHQ","dQw4w9WgXcQ", "9bZkp7q19f0", "VdQY7Bus3wA", "1fL71Mx3wm0", "e-4OBKmeXtI", "KkcuLqj4LFA", "G5MZrTPslD8", "e_tTY-s_R1Q", "zA2G8_eY9Eo", "uO7txC27nHQ","dQw4w9WgXcQ", "9bZkp7q19f0", "VdQY7Bus3wA", "1fL71Mx3wm0", "e-4OBKmeXtI", "KkcuLqj4LFA", "G5MZrTPslD8", "e_tTY-s_R1Q", "zA2G8_eY9Eo", "uO7txC27nHQ","dQw4w9WgXcQ", "9bZkp7q19f0", "VdQY7Bus3wA", "1fL71Mx3wm0", "e-4OBKmeXtI", "KkcuLqj4LFA", "G5MZrTPslD8", "e_tTY-s_R1Q", "zA2G8_eY9Eo", "uO7txC27nHQ"],
+          "image": "https://example.com/image2.jpg"
         }
-    ];
+      }
+    },
+    {
+      "Chapter 02 - Financial Management": {
+        "Mita Sarker - Expert in financial strategies": {
+          "videos": ["kJQP7kiw5Fk", "Pm_rHDpNQKM", "2YdO-Z6kY48", "6rDEqZbTWU4", "p_lzdyEr2Wg", "3F3gBmy7kL4", "uX6m16RU8rM", "vTBFpmwA6nA", "9gnD4pJQz10", "5r8K9bftRyo"],
+          "image": "https://example.com/image3.jpg"
+        },
+        "Sanjay Patel - Specialist in corporate finance": {
+          "videos": ["kJQP7kiw5Fk", "A9ehP76qSKE", "gT6M1NydNLo", "G5Vx7A7dSzw", "A9lSzI4XjHw", "jY_jz2ykvC4", "Kgl6-sC0qlY", "3Jf4rbGqRu8", "5brjlX9F6u4", "oJ6I0Ey4KQ0"],
+          "image": "https://example.com/image4.jpg"
+        }
+      }
+    },
+    {
+      "Chapter 03 - Marketing Strategies": {
+        "Tariq Hossain - Guru in marketing tactics": {
+          "videos": ["L_j4Th1hA4Q", "tI1xZn9p5v4", "V3sDFJ7FtiQ", "g63v0mF7mnk", "4rP6TTps7oQ", "hA2w9Dd5mtk", "F2heXn1LOgE", "h9ohHJ-JQk4", "3Z9It9UlvhU", "GgXoL1lE4iI"],
+          "image": "https://example.com/image5.jpg"
+        },
+        "Sultana Begum - Specialist in digital marketing": {
+          "videos": ["t2gAqFxx3-8", "r12PZEl2gW8", "FOV1_p21LOI", "wq9LHRFLcG8", "FJFxJ55aD6k", "t8GhF4ZkS34", "zqxI8hvTP-U", "i03GCVK_gAc", "A_-B3nF_9y4", "l9wK7lqZPfU"],
+          "image": "https://example.com/image6.jpg"
+        }
+      }
+    }
+  ];
 
     function sanitizeForClassName(text) {
         return text
